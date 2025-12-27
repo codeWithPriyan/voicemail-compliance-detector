@@ -1,0 +1,29 @@
+# API Keys - NEVER COMMIT THESE
+src/main/resources/application.properties
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+
+# IntelliJ
+.idea/
+*.iml
+*.iws
+out/
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+
+# Output files (keep for now, they're safe)
+#voicemail_analysis_results.csv
+#voicemail_detailed_report.txt

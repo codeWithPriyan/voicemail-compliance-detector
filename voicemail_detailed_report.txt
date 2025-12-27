@@ -1,0 +1,175 @@
+═══════════════════════════════════════════════════════════════════════
+          VOICEMAIL DROP COMPLIANCE ANALYSIS - DETAILED REPORT         
+═══════════════════════════════════════════════════════════════════════
+
+─────────────────────────────────────────────────────────────────────
+FILE 1: vm1_output.wav
+─────────────────────────────────────────────────────────────────────
+
+DETECTION RESULTS:
+  • Greeting End Time:    10.740 seconds
+  • Beep Detected:        NO
+  • Beep Expected:        MEDIUM - Possible beep (wait 2s)
+
+TRANSCRIPT:
+  "Please leave your message for six zero nine six eight six seven nine three nine."
+
+FINAL DECISION:
+  • Recommended Start:    13.740 seconds
+  • Confidence Level:     MEDIUM-HIGH
+  • Reasoning:            Transcript mentions 'leave a message' but no explicit beep phrase. Waiting 3.0s as moderate safety buffer.
+
+COMPLIANCE STATUS:
+  ✓ Consumer will hear message starting at recommended timestamp
+  ✓ Company name will be included in first 2 seconds
+  ✓ Return phone number will be included in message body
+  ✓ STATUS: COMPLIANT
+
+─────────────────────────────────────────────────────────────────────
+FILE 2: vm2_output.wav
+─────────────────────────────────────────────────────────────────────
+
+DETECTION RESULTS:
+  • Greeting End Time:    9.100 seconds
+  • Beep Detected:        NO
+  • Beep Expected:        HIGH - Beep expected (wait 3s)
+
+TRANSCRIPT:
+  "Your call has been forwarded to voice mail. The person you're trying to reach is not available. At the tone, please record your message. When you have finished recording, you may hang up."
+
+FINAL DECISION:
+  • Recommended Start:    12.100 seconds
+  • Confidence Level:     MEDIUM
+  • Reasoning:            Transcript mentions beep ('at the tone' or 'after the beep'), but no beep detected. Waiting 3.0s to be safe.
+
+COMPLIANCE STATUS:
+  ✓ Consumer will hear message starting at recommended timestamp
+  ✓ Company name will be included in first 2 seconds
+  ✓ Return phone number will be included in message body
+  ✓ STATUS: COMPLIANT
+
+─────────────────────────────────────────────────────────────────────
+FILE 3: vm3_output.wav
+─────────────────────────────────────────────────────────────────────
+
+DETECTION RESULTS:
+  • Greeting End Time:    9.840 seconds
+  • Beep Detected:        NO
+  • Beep Expected:        LOW - No beep expected (wait 1s)
+
+TRANSCRIPT:
+  "Your call has been forwarded to the voicemail for Sahil Singla. No one is available to take your call. Please record your message. When you've finished recording, you may hang up."
+
+FINAL DECISION:
+  • Recommended Start:    10.840 seconds
+  • Confidence Level:     MEDIUM-HIGH
+  • Reasoning:            No beep phrases in transcript and no beep detected. Starting 1.0s after greeting ends (minimal delay).
+
+COMPLIANCE STATUS:
+  ✓ Consumer will hear message starting at recommended timestamp
+  ✓ Company name will be included in first 2 seconds
+  ✓ Return phone number will be included in message body
+  ✓ STATUS: COMPLIANT
+
+─────────────────────────────────────────────────────────────────────
+FILE 4: vm4_output.wav
+─────────────────────────────────────────────────────────────────────
+
+DETECTION RESULTS:
+  • Greeting End Time:    4.960 seconds
+  • Beep Detected:        NO
+  • Beep Expected:        LOW - No beep expected (wait 1s)
+
+TRANSCRIPT:
+  "Hi. If you record your name and reason for calling, I'll see if this person is available."
+
+FINAL DECISION:
+  • Recommended Start:    5.960 seconds
+  • Confidence Level:     MEDIUM-HIGH
+  • Reasoning:            No beep phrases in transcript and no beep detected. Starting 1.0s after greeting ends (minimal delay).
+
+COMPLIANCE STATUS:
+  ✓ Consumer will hear message starting at recommended timestamp
+  ✓ Company name will be included in first 2 seconds
+  ✓ Return phone number will be included in message body
+  ✓ STATUS: COMPLIANT
+
+─────────────────────────────────────────────────────────────────────
+FILE 5: vm5_output.wav
+─────────────────────────────────────────────────────────────────────
+
+DETECTION RESULTS:
+  • Greeting End Time:    14.720 seconds
+  • Beep Detected:        NO
+  • Beep Expected:        LOW - No beep expected (wait 1s)
+
+TRANSCRIPT:
+  "Hi. You're from James Street store. Five five six five four eight four. And you are able to take the phone at the moment, give me your name, your callback number, and a brief message. I'll do my best to tell you a call as soon as possible. Thank you. Have a blessed day. Bye bye."
+
+FINAL DECISION:
+  • Recommended Start:    15.720 seconds
+  • Confidence Level:     MEDIUM-HIGH
+  • Reasoning:            No beep phrases in transcript and no beep detected. Starting 1.0s after greeting ends (minimal delay).
+
+COMPLIANCE STATUS:
+  ✓ Consumer will hear message starting at recommended timestamp
+  ✓ Company name will be included in first 2 seconds
+  ✓ Return phone number will be included in message body
+  ✓ STATUS: COMPLIANT
+
+─────────────────────────────────────────────────────────────────────
+FILE 6: vm6_output.wav
+─────────────────────────────────────────────────────────────────────
+
+DETECTION RESULTS:
+  • Greeting End Time:    4.000 seconds
+  • Beep Detected:        NO
+  • Beep Expected:        MEDIUM - Possible beep (wait 2s)
+
+TRANSCRIPT:
+  "Hey, sir. I missed you. Just leave a message, and I will call you back."
+
+FINAL DECISION:
+  • Recommended Start:    7.000 seconds
+  • Confidence Level:     MEDIUM-HIGH
+  • Reasoning:            Transcript mentions 'leave a message' but no explicit beep phrase. Waiting 3.0s as moderate safety buffer.
+
+COMPLIANCE STATUS:
+  ✓ Consumer will hear message starting at recommended timestamp
+  ✓ Company name will be included in first 2 seconds
+  ✓ Return phone number will be included in message body
+  ✓ STATUS: COMPLIANT
+
+─────────────────────────────────────────────────────────────────────
+FILE 7: vm7_output.wav
+─────────────────────────────────────────────────────────────────────
+
+DETECTION RESULTS:
+  • Greeting End Time:    12.500 seconds
+  • Beep Detected:        NO
+  • Beep Expected:        LOW - No beep expected (wait 1s)
+
+TRANSCRIPT:
+  "Hi, and thank you for calling. You've reached Tiffany. I'm sorry I'm not available to take your call. But if you leave your name and your number, I shall return your call at my earliest convenience. You have a good day."
+
+FINAL DECISION:
+  • Recommended Start:    13.500 seconds
+  • Confidence Level:     MEDIUM-HIGH
+  • Reasoning:            No beep phrases in transcript and no beep detected. Starting 1.0s after greeting ends (minimal delay).
+
+COMPLIANCE STATUS:
+  ✓ Consumer will hear message starting at recommended timestamp
+  ✓ Company name will be included in first 2 seconds
+  ✓ Return phone number will be included in message body
+  ✓ STATUS: COMPLIANT
+
+═══════════════════════════════════════════════════════════════════════
+                            SUMMARY STATISTICS                          
+═══════════════════════════════════════════════════════════════════════
+
+Total Files Analyzed:           7
+Beeps Detected:                 0 (0%)
+High Confidence Decisions:      6 (86%)
+All Files Status:               COMPLIANT
+
+═══════════════════════════════════════════════════════════════════════

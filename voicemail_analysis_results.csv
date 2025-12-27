@@ -1,0 +1,8 @@
+File,Greeting_End_Time(s),Beep_Detected,Beep_Expected,Recommended_Start_Time(s),Confidence,Reasoning
+vm1_output.wav,10.740,NO,MEDIUM,13.740,MEDIUM-HIGH,"Transcript mentions 'leave a message' but no explicit beep phrase. Waiting 3.0s as moderate safety buffer."
+vm2_output.wav,9.100,NO,HIGH,12.100,MEDIUM,"Transcript mentions beep ('at the tone' or 'after the beep'), but no beep detected. Waiting 3.0s to be safe."
+vm3_output.wav,9.840,NO,LOW,10.840,MEDIUM-HIGH,"No beep phrases in transcript and no beep detected. Starting 1.0s after greeting ends (minimal delay)."
+vm4_output.wav,4.960,NO,LOW,5.960,MEDIUM-HIGH,"No beep phrases in transcript and no beep detected. Starting 1.0s after greeting ends (minimal delay)."
+vm5_output.wav,14.720,NO,LOW,15.720,MEDIUM-HIGH,"No beep phrases in transcript and no beep detected. Starting 1.0s after greeting ends (minimal delay)."
+vm6_output.wav,4.000,NO,MEDIUM,7.000,MEDIUM-HIGH,"Transcript mentions 'leave a message' but no explicit beep phrase. Waiting 3.0s as moderate safety buffer."
+vm7_output.wav,12.500,NO,LOW,13.500,MEDIUM-HIGH,"No beep phrases in transcript and no beep detected. Starting 1.0s after greeting ends (minimal delay)."
