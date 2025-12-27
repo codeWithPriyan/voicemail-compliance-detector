@@ -77,15 +77,15 @@ All timestamps are **COMPLIANT** (company name + phone number will be heard).
 
 ## Project Structure
 
-voicemail-detector/
-├── ✅ pom.xml
-├── ✅ README.md
-├── ✅ REPORT.md
-├── ✅ .gitignore (contains DEEPGRAM_API_KEY)
-├── ✅ voicemail_analysis_results.csv (generated)
-├── ✅ voicemail_detailed_report.txt (generated)
+**voicemail-detector/
+├── **✅ pom.xml
+├── **✅ README.md
+├── **✅ REPORT.md
+├── ** ✅ .gitignore (contains DEEPGRAM_API_KEY)
+├── **✅ voicemail_analysis_results.csv (generated)
+├── **✅ voicemail_detailed_report.txt (generated)
 │
-├── src/main/java/com/clearpath/
+├──** src/main/java/com/clearpath/
 │   ├── ✅ VoicemailAnalyzer.java  # Main entry point
 │   ├── ✅ OutputGenerator.java    # CSV/Report generator
 │   ├── config/                    # Configuration (API key here)
