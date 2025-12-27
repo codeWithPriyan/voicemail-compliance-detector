@@ -77,38 +77,7 @@ All timestamps are **COMPLIANT** (company name + phone number will be heard).
 
 ## Project Structure
 
-voicemail-detector/
-├── ✅ pom.xml
-├── ✅ README.md
-├── ✅ REPORT.md
-├── ✅ .gitignore (contains DEEPGRAM_API_KEY)
-├── ✅ voicemail_analysis_results.csv (generated)
-├── ✅ voicemail_detailed_report.txt (generated)
-│
-├──src/main/java/com/clearpath/
-│   ├── ✅ VoicemailAnalyzer.java  # Main entry point
-│   ├── ✅ OutputGenerator.java    # CSV/Report generator
-│   ├── config/                    # Configuration (API key here)
-│   │   └── ✅ Config.java (API key removed or in .gitignore)
-│   ├── audio/                      # WAV processing
-│   │   ├── ✅ AudioReader.java
-│   │
-│   ├── detection/
-│   │   ├── ✅ EnergyDetector.java    # WAV processing
-│   │   └── ✅ BeepDetector.java      # FFT-based beep detection
-│   ├── transcription/
-│   │   ├── ✅ DeepgramClient.java     # STT API client
-│   │   └── ✅ TranscriptAnalyzer.java # Pattern matching
-│   ├── decision/
-│   │   └── ✅ DecisionEngine.java     # Final decision logic
-│   └── model/                         # Data models
-│       ├── ✅ AudioFrame.java
-│       ├── ✅ BeepInfo.java
-│       ├── ✅ AnalysisResult.java
-│       └── ✅ DeepgramResponse.java
-│
-└── audio-files/
-
+voicemail-detector/ ├── pom.xml ├── README.md ├── REPORT.md ├── .gitignore                  # excludes API keys and IDE/build files ├── voicemail_analysis_results.csv ├── voicemail_detailed_report.txt │ ├── src/main/java/com/clearpath/ │   ├── VoicemailAnalyzer.java      # Main entry point │   ├── OutputGenerator.java        # CSV/Report generator │   ├── config/                     # Configuration (API key placeholder here) │   │   └── Config.java │   ├── audio/                      # WAV processing │   │   └── AudioReader.java │   ├── detection/ │   │   ├── EnergyDetector.java     # Energy/silence detection │   │   └── BeepDetector.java       # FFT-based beep detection │   ├── transcription/ │   │   ├── DeepgramClient.java     # STT API client │   │   └── TranscriptAnalyzer.java # Beep phrase pattern matching │   ├── decision/ │   │   └── DecisionEngine.java     # Final decision logic │   └── model/                      # Data models │       ├── AudioFrame.java │       ├── BeepInfo.java │       ├── AnalysisResult.java │       └── DeepgramResponse.java │ └── audio-files/ ├── vm1_output.wav ├── …
 
 # Voicemail Drop Compliance - Submission Report
 
