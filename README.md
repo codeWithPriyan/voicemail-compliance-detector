@@ -67,14 +67,6 @@ All timestamps are **COMPLIANT** (company name + phone number will be heard).
 - **OkHttp** - WebSocket client
 - **Gson** - JSON parsing
 
-## Key Design Decisions
-
-**Why FFT?** Beeps are pure tones (single frequency). FFT distinguishes narrowband signals from broadband speech.
-
-**Why Multi-Signal?** If one method fails (no beep detected), transcript-based fallback ensures compliance.
-
-**Why Conservative Timing?** Better to wait 1-3 seconds extra than risk non-compliance.
-
 ## Project Structure
 
 ```voicemail-detector/ 
@@ -105,6 +97,64 @@ All timestamps are **COMPLIANT** (company name + phone number will be heard).
 │       ├── AnalysisResult.java │
 │    └── DeepgramResponse.java │
 └── audio-files/ ```
+
+## Design Decisions
+
+### Why Energy Detection?
+- Simple RMS calculation is fast (<5ms per frame)
+- Works reliably across different audio qualities
+- Handles initial silence gracefully
+
+### Why FFT for Beep Detection?
+- Beeps are pure tones (single frequency)
+- FFT clearly distinguishes narrowband signals from broadband speech
+- 1024-point FFT gives 15.625 Hz resolution (sufficient for 900-1100 Hz range)
+
+### Why Deepgram?
+- Real-time streaming capability (200-500ms latency)
+- High accuracy (>95% for clear audio)
+- Free tier sufficient for testing (200 min/month)
+
+### Why Multi-Signal Approach?
+- **Robustness**: If one signal fails (e.g., no beep), others compensate
+- **Accuracy**: Transcript predicts beep → informs search window
+- **Compliance-first**: Conservative delays ensure message is heard
+
+## Edge Cases Handled
+
+1. **Initial silence before greeting** - Ignored by tracking speech start
+2. **No beep detected** - Uses transcript-based timing fallback
+3. **Multiple pauses in greeting** - Requires 1 second continuous silence
+4. **Varying audio formats** - Converts to 16kHz mono automatically
+5. **Deepgram timeout** - Falls back to LOW beep probability
+
+## Compliance Guarantee
+
+All timestamps ensure:
+✅ Consumer hears **company name** in first 2 seconds  
+✅ Consumer hears **return phone number** in message body  
+✅ Message starts **after voicemail recording begins**
+
+## Future Improvements
+
+1. **Real-time streaming** - Process audio as call happens (not post-analysis)
+2. **Adaptive thresholds** - Learn optimal delays from historical data
+3. **Multi-frequency beep detection** - Handle 850Hz, 1000Hz variants
+4. **Voice activity detection (VAD)** - Use WebRTC VAD for higher accuracy
+5. **Database integration** - Store results for analytics
+
+## Author
+
+Developed as a take-home assignment demonstrating:
+- Signal processing (FFT, energy analysis)
+- AI integration (Deepgram STT)
+- System design (modular architecture)
+- Compliance engineering (FDCPA regulations)
+
+## License
+
+This is a demonstration project for educational/interview purposes.
+
 
 # Voicemail Drop Compliance - Submission Report
 
