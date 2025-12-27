@@ -109,9 +109,9 @@ All timestamps are **COMPLIANT** (company name + phone number will be heard).
 # Voicemail Drop Compliance - Submission Report
 
 ## Submitted By
-**Name:** Priyanshu Mishra  
-**Date:** December 27, 2025  
-**Assignment:** Drop Compliant Voicemails - Take Home Challenge
+Name: Priyanshu Mishra  
+Date: December 27, 2025  
+Assignment: Drop Compliant Voicemails - Take Home Challenge
 
 ---
 
@@ -121,7 +121,7 @@ Developed a multi-signal audio analysis system that determines optimal timestamp
 voicemail messages. The solution analyzes 7 test voicemail files and outputs recommended start times ensuring consumers
 hear company name and return phone number as required by FDCPA regulations.
 
-**Key Result:** All 7 files analyzed successfully with 100% compliant timestamps.
+Key Result: All 7 files analyzed successfully with 100% compliant timestamps.
 
 ---
 
@@ -143,10 +143,10 @@ hear company name and return phone number as required by FDCPA regulations.
 - Assigns beep probability: HIGH/MEDIUM/LOW
 
 ### 4. Rule-Based Decision Engine
-- **CASE 1:** Beep detected → start 0.5s after beep
-- **CASE 2:** HIGH beep expected, not found → wait 3.0s
-- **CASE 3:** MEDIUM beep expected → wait 2.0s
-- **CASE 4:** LOW beep expected → wait 1.0s
+- CASE 1: Beep detected → start 0.5s after beep
+- CASE 2: HIGH beep expected, not found → wait 3.0s
+- CASE 3: MEDIUM beep expected → wait 2.0s
+- CASE 4: LOW beep expected → wait 1.0s
 
 ---
 
@@ -162,9 +162,9 @@ hear company name and return phone number as required by FDCPA regulations.
 | vm6_output.wav | 4.000s | 7.000s | MEDIUM → 3s wait |
 | vm7_output.wav | 12.500s | 13.500s | LOW → 1s wait |
 
-**Compliance Status:** ✅ All files COMPLIANT  
-**Beeps Detected:** 0 out of 7 (realistic - many voicemails have silent recording)  
-**Confidence:** 5 MEDIUM-HIGH, 2 MEDIUM
+Compliance Status: ✅ All files COMPLIANT  
+Beeps Detected: 0 out of 7 (realistic - many voicemails have silent recording)  
+Confidence: 5 MEDIUM-HIGH, 2 MEDIUM
 
 ---
 
@@ -183,43 +183,43 @@ hear company name and return phone number as required by FDCPA regulations.
 
 ## Edge Cases Handled
 
-1. ✅ **Initial silence before greeting** - Tracks speech start, ignores leading silence
-2. ✅ **No beep detected** - Uses transcript-based fallback timing
-3. ✅ **Multiple pauses in greeting** - Requires 1s continuous silence
-4. ✅ **Various audio formats** - Auto-converts to 16kHz mono
-5. ✅ **Deepgram API timeout** - Defaults to LOW beep probability
-6. ✅ **Short/long greetings** - Adaptive timing (1s to 3s waits)
+1. ✅ Initial silence before greeting - Tracks speech start, ignores leading silence
+2. ✅ No beep detected - Uses transcript-based fallback timing
+3. ✅ Multiple pauses in greeting - Requires 1s continuous silence
+4. ✅ Various audio formats - Auto-converts to 16kHz mono
+5. ✅ Deepgram API timeout - Defaults to LOW beep probability
+6. ✅ Short/long greetings - Adaptive timing (1s to 3s waits)
 
 ---
 
 ## Deliverables
 
-1. ✅ **Source Code** - Complete Java implementation
-2. ✅ **CSV Output** - `voicemail_analysis_results.csv`
-3. ✅ **Detailed Report** - `voicemail_detailed_report.txt`
-4. ✅ **README** - Setup and usage instructions
-5. ✅ **Explanation Paragraph** - `EXPLANATION.md`
-6. ✅ **Demo Script** - Presentation guide
+1. ✅ Source Code - Complete Java implementation
+2. ✅ CSV Output - `voicemail_analysis_results.csv`
+3. ✅ Detailed Report - `voicemail_detailed_report.txt`
+4. ✅ README - Setup and usage instructions
+5. ✅ Explanation Paragraph - `EXPLANATION.md`
+6. ✅ Demo Script - Presentation guide
 
 ---
 
 ## What I Learned
 
-- **Signal Processing:** FFT application for frequency analysis in real-world scenarios
-- **Multi-Signal Fusion:** Combining independent detectors for robust decisions
-- **Compliance Engineering:** Prioritizing legal requirements over performance
-- **API Integration:** Real-time streaming with Deepgram WebSocket
-- **Pragmatic Trade-offs:** Conservative timing vs. user experience balance
+- Signal Processing: FFT application for frequency analysis in real-world scenarios
+- Multi-Signal Fusion: Combining independent detectors for robust decisions
+- Compliance Engineering: Prioritizing legal requirements over performance
+- API Integration: Real-time streaming with Deepgram WebSocket
+- Pragmatic Trade-offs: Conservative timing vs. user experience balance
 
 ---
 
 ## Future Improvements
 
-1. **Real-time streaming** - Process audio as call happens (not post-analysis)
-2. **Adaptive thresholds** - Machine learning to optimize delays from historical data
-3. **Multi-frequency beeps** - Handle 850Hz, 1000Hz, 1400Hz variants
-4. **Advanced VAD** - Use WebRTC Voice Activity Detection for higher accuracy
-5. **Feedback loop** - Track actual compliance outcomes to refine logic
+1. Real-time streaming - Process audio as call happens (not post-analysis)
+2. Adaptive thresholds - Machine learning to optimize delays from historical data
+3. Multi-frequency beeps - Handle 850Hz, 1000Hz, 1400Hz variants
+4. Advanced VAD - Use WebRTC Voice Activity Detection for higher accuracy
+5. Feedback loop - Track actual compliance outcomes to refine logic
 
 ---
 
