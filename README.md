@@ -1,9 +1,19 @@
 # Voicemail Drop Compliance Detector
 
 ## Problem Statement
-Analyze voicemail greetings to determine the optimal timestamp for starting a prerecorded compliance message, 
-ensuring consumers hear the company name and return phone number (FDCPA compliance).
+## Input
 
+- You are given **7 audio files** from calls that went to voicemail.
+- You must **stream** these audio files to simulate phone calls
+    
+  (Important: real phone calls are streaming, not pre-recorded chunks)
+    
+
+---
+
+## Output
+
+For **each audio file**, output the **timestamp(s)** at which you would start playing the voicemail.
 ## Solution Approach
 Multi-signal detection system combining:
 1. **Energy Detection** - Identifies when greeting ends (silence detection)
